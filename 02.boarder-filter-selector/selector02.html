@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // 선택자1:last: 선택자1 태그들 마지막 태그를 선택
+      // 선택자1:last-child: 선택자1 태그들 중 각 영역별 마지막 태그들을 선택
+      //                      마지막 태그가 선택자1 태그가 아니면 스킵
+      // 선택자1:last-of-type: 선택자1 태그들 중 각 영역별 마지막 태그들을 선택
+      //                       마지막 태그가 선택자1 태그가 아니면 위에서 찾음
+      $(function () {
+        $('p:last').css('background-color', 'yellow');
+        $('p:last-child').css('color', 'orange');
+        $('p:last-of-type').css('font-size', '30px');
+      });
+    </script>
+  </head>
+  <body>
+    <div>div태그</div>
+    <p>p태그</p>
+    <hr />
+    <div>
+      <p>div 안의 p태그</p>
+      <p>div 안의 p태그</p>
+      <p>div 안의 p태그</p>
+    </div>
+    <hr />
+    <div>
+      <p>div 안의 p태그</p>
+      <p>div 안의 p태그</p>
+      <div>div 안의 div태그</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // 선택자1:first: 선택자1 태그들 첫번째 태그를 선택
+      // 선택자1:first-child: 선택자1 태그들 중 각 영역별 첫번째 태그들을 선택
+      //                      첫번째 태그가 선택자1 태그가 아니면 스킵
+      // 선택자1:first-of-type: 선택자1 태그들 중 각 영역별 첫번째 태그들을 선택
+      //                        첫번째 태그가 선택자1 태그가 아니더라도 끝까지 찾음
+      $(function () {
+        $('p:first').css('background-color', 'yellow');
+        $('p:first-child').css('color', 'orange');
+        $('p:first-of-type').css('font-size', '30px');
+      });
+    </script>
+  </head>
+  <body>
+    <div>div태그</div>
+    <p>p태그</p>
+    <hr />
+    <div>
+      <p>div 안의 p태그</p>
+      <p>div 안의 p태그</p>
+      <p>div 안의 p태그</p>
+    </div>
+    <hr />
+    <div>
+      <div>div 안의 div태그</div>
+      <p>div 안의 p태그</p>
+      <p>div 안의 p태그</p>
+    </div>
+  </body>
+</html>

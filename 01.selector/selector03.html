@@ -5,13 +5,18 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-      // jquery 기본 문법: $(선택자).명령어
+      // 자식 선택자: 선택자1 > 선택자2
       $(function () {
-        $('p').append('jQuery');
+        $('#test1 > h1').css('background-color', 'skyblue');
       });
     </script>
   </head>
   <body>
-    <p>hello world</p>
+    <div id="test1">
+      <h1>자식 태그</h1>
+      <div>
+        <h1>손자 태그</h1>
+      </div>
+    </div>
   </body>
 </html>

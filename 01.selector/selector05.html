@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // 선택자1선택자2: 선택자1이면서 선택자2인 태그를 선택
+      $(function () {
+        $('div.test1').css('background-color', 'yellow');
+        $('div.test2').css('background-color', 'green');
+        $('div.test3').css('background-color', 'red');
+        $('div.test4').css('background-color', 'blue');
+        $('div.test5').css('background-color', 'pink');
+      });
+    </script>
+  </head>
+  <body>
+    <div class="test1">div test1</div>
+    <div class="test2">div test2</div>
+    <div class="test3">div test3</div>
+    <div class="test4">div test4</div>
+    <div class="test5">div test5</div>
+    <p class="test1">p test1</p>
+    <p class="test2">p test2</p>
+    <p class="test3">p test3</p>
+    <p class="test4">p test4</p>
+    <p class="test5">p test5</p>
+    <p id="test1">p test1</p>
+    <p id="test1">p test2</p>
+    <p id="test1">p test3</p>
+    <p id="test1">p test4</p>
+    <p id="test1">p test5</p>
+  </body>
+</html>
