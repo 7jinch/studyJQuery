@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // on: 이벤트 설정하기
+      // off: 설정된 이벤트 제거하기
+      // one: 이벤트를 설정하고 이벤트가 발생되면 제거
+      $(function () {
+        $('#test1').on('click', function () {
+          alert('test1');
+        });
+      });
+
+      function removeEvent() {
+        $('#test1').off('click');
+        alert('이벤트 제거');
+      }
+    </script>
+  </head>
+  <body>
+    <h3 id="test1">on</h3>
+    <input type="button" value="이벤트 제거" onclick="removeEvent()" />
+    <h3 id="test2">one</h3>
+    <h3 id="test3">evnet</h3>
+  </body>
+</html>

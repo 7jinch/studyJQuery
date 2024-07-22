@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // [속성 ~= 값]: 같거나 띄어쓰기로 구분된 태그를 선택
+      // [속성 *= 값]: 포함하는 태그를 선택
+      $(function () {
+        $('p[title ~= aa]').css('background-color', 'skyblue');
+        $('p[title *= aa]').css('color', 'red');
+      });
+    </script>
+  </head>
+  <body>
+    <p title="aa2">aa2</p>
+    <p title="aa3">aa3</p>
+    <p title="aa a4">aa a4</p>
+    <p title="aa">aa</p>
+  </body>
+</html>

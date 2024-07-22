@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // :contains(): 값이 있는 태그를 선택
+      $(function () {
+        $('div:contains(hello)').css('background-color', 'skyblue');
+      });
+    </script>
+  </head>
+  <body>
+    <div>hello wolrd</div>
+    <dov>hello jquery</dov>
+    <div>hello js</div>
+  </body>
+</html>

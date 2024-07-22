@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // click, dblclick
+      // mouseenter. mouseleave, mousedown, mouseup, hover
+      // focus, blur
+      $(function () {
+        $('#test5').hover(
+          function () {
+            $('#test5').css('background-color', 'gold');
+          },
+          function () {
+            $('#test5').css('background-color', 'white');
+          }
+        );
+
+        $('#test6').focus(function () {
+          $('#test6').css('background-color', 'skyblue');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h3 id="test1">click</h3>
+    <h3 id="test2">bouble click</h3>
+    <h3 id="test3">mouse enter / leave</h3>
+    <h3 id="test4">mouse down / up</h3>
+    <h3 id="test5">hover</h3>
+    <input type="text" id="test6" />
+  </body>
+</html>
