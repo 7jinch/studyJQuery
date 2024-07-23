@@ -9,8 +9,26 @@
       // off: 설정된 이벤트 제거하기
       // one: 이벤트를 설정하고 이벤트가 발생되면 제거
       $(function () {
-        $('#test1').on('click', function () {
+        $('#test1').on('dblclick', function () {
           alert('test1');
+        });
+
+        $('#test2').one('click', function () {
+          alert('test2');
+        });
+
+        $('#test3').on({
+          click: function () {
+            alert('test3 click');
+          },
+          mouseenter: function () {
+            $('#test3').css('background-color', 'skyblue');
+            $('#test3').css('color', 'gold');
+          },
+          mouseleave: function () {
+            $('#test3').css('background-color', 'white');
+            $('#test3').css('color', 'black');
+          },
         });
       });
 

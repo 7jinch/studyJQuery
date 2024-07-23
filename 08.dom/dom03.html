@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // append(): html 코드나 태그를 태그 내부(영역)의 뒤에 추가함
+      // prepend(): 앞에 추가함
+
+      // after(): html 코드나 태그를 태그 다음에 추가함
+      // before(): 태그 앞에 추가함
+
+      // remove(): 선택한 태그를 제거함
+      // empty(): 선택한 태그 내의 모든 태그를 제거함
+      let count = 0;
+
+      $(function () {
+        $('#input-text').keypress(function (e) {
+          if (e.keyCode && e.keyCode == 13) {
+            const html = setHTML();
+            $('#test1').append(html);
+            $('#input-text').val('');
+          }
+        });
+      });
+
+      function setHTML() {
+        const text = $('#input-text').val();
+        const html = `<div id="name-${++count}">
+                            <h3>${count}번 : ${text}님</h3>
+                            <input type="button" value="지우기" onclick="removeName(this)" />
+                          </div>`;
+        $('#test1').append(html);
+      }
+
+      function appendName() {
+        const html = setHTML();
+        $('#test1').append(html);
+      }
+
+      function removeName(elment) {
+        $(elment).parent().remove();
+        count--;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="input-text" />
+    <input type="button" value="추가하기" onclick="appendName()" />
+    <div id="test1">
+      <p>예약 명부</p>
+    </div>
+  </body>
+</html>
